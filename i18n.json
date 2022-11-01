@@ -1,0 +1,13 @@
+{
+  "locales": [
+    "zh-TW",
+    "en"
+  ],
+  "defaultLocale": "zh-TW",
+  "localeDetection": false,
+  "pages": {
+    "*": [
+      "common"
+    ]
+  }
+}

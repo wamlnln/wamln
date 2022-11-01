@@ -1,0 +1,136 @@
+---
+title: 记录搭建博客
+date: '2022-08-22T03:57:00Z'
+modifiedTime: '2022-08-22T08:22:00Z'
+summary: 搭建记录学习笔记的博客
+image: 'how-to-build-a-blog-with-nextjs-and-mdx/cover.png'
+---
+
+结合项目边做边学！！！
+
+先将官方文档技术文档主要内容做起来再查阅官方技术手册
+
+## 创建项目
+
+`npx create-next-app 项目名称`
+
+```
+|-- /.next              #用于 SSR 运行的工程，执行 yarn dev 或 yarn build 后才会出现
+|-- /node_modules
+|-- /pages              #Next.js 指定的页面目录
+|   |-- /api            #Next.js 指定的 API 服务目录，可以删除
+|       |-- hello.js    #API 服务的 hel1o 接口
+|   |-- _app.js
+|   |-- index.js        #项目首页
+|-- /public             #静态目录，放在这里的文件可通过“/”直接访问(没有 pub1ic 这一层级)
+|   |-- favicon.ico
+|   |-- vercel.svg
+|-- /styles             #项目全局样式
+|   |-- globals.css
+|   |-- Home.module.css #Home 组件样式
+|-- .eslintrc.json
+|-- .gitignore
+|-- next.config.json    #Next.js 配置文件
+|-- package.json
+|-- README.md
+|-- yarn.lock
+```
+
+由于日常项目的开发习惯是目录结构是有 src 目录的，为保持一致的开发体验仍然可以使用 src 做为开发目录
+
+重新组织目录结构：
+
+1. 在项目根目录新建 src 目录
+
+2. 把 pages、styles 两个目录放到 src 目录里
+
+3. 暂时删除 pages 里的 api 目录
+
+<Alert
+  icon='💡'
+  title='变更了日录结构项目还可以正常运行解释如下：'
+  color='yellow'
+  radius='md'
+>
+  由于 src 目录是普遍存在于大多数脚手架工程中，所以 Next.js 也对 src目录做了支持
+</Alert>
+
+关于 sc 日录，官方的规则如下：
+
+1. 如果根目录下有 pages，则 src/pages 将被忽略。
+
+2. public 目录以及 next.config.js、jsconfig.json、tsconfig.json 不能放到 src 目录里
+
+```
+|-- /.next
+|-- /node_modules
+|-- /src
+|   |-- /pages
+|       |-- \_app.js
+|       |-- index.js
+|   |-- /styles
+|-- /public
+|   |-- favicon.ico
+|   |-- vercel.svg
+|-- .eslintrc.json
+|-- .gitignore
+|-- next.config.json
+|-- package.json
+|-- README.md
+|-- yarn.lock
+```
+
+## 配置项目
+
+1. 添加 component-->
+2. 添加
+
+```
+|-- /src
+|   |-- components
+|   |-- /pages
+|       |-- \_app.js
+|       |-- index.js
+|   |-- /styles
+```
+
+## 首页设计
+
+1. 添加首页组件`/components/Home/Layout/Layout.tsx`
+
+2. 添加首页页眉组件 Header-->在`/components/Home/Layout/Header`
+
+3. 添加首页页脚组件 Footer-->在`/components/Home/Layout/Footer`
+
+```
+ |-- /src
+ |   |-- /components
++|       |-- /Home
++|           |-- /Layout
++|                |-- /Header
++|                |-- /Footer
++|                |-- Layout
+ |   |-- /pages
+ |       |-- _app.js
+ |       |-- index.js
+ |   |-- /styles
+```
+
+5. 要求页眉页脚固定-->在/pages/\_app.js 添加 Header 组件和 Footer 组件
+
+### 首页组件
+
+1. 安装`npm install @mantine/core` - [mantine](https://mantine.dev/pages/getting-started/)
+
+2. 安装`npm install next-seo` - [使用简单的数据结构管理 Nextjs 项目中的档头 SEO 元数据]()
+   `Layout.tsx`内容如下
+
+## 页面路由
+
+## 图片视频引用
+
+## 接口请求
+
+## 动态路由
+
+## 其他说明
