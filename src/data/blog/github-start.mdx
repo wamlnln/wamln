@@ -1,0 +1,25 @@
+---
+title: github入门
+date: '2022-08-15T00:00:00Z'
+modifiedTime: '2022-08-18T00:00:00Z'
+summary: 在 VMware 上安裝 Windows，然後做一些瘋狂的事情吧！
+image: 'how-to-install-win11-on-vmware/cover.png'
+---
+
+## .gitignore
+
+### 场景问题
+
+有时候一些项目中并不需要本地仓库的所有文件都上传到远程仓库中，而是有选择的上传
+
+比如：一些依赖文件（node_modules 下的依赖）、bin 目录下的文件、测试文件等
+
+一方面将一些依赖、测试文件都上传到远程传输量很大
+
+另一方面一些文件对于你这边是可用的，在另一个人那可能就不可用了，比如：本地配置文件
+
+<Alert icon='💡' title='解决' color='yellow' radius='md'>
+  git 引入了 .gitignore 文件，使用该文件来选择性的上传文件
+</Alert>
+
+### 使用规则
